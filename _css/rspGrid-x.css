@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto; }
 
-.row:after, .col:after, .clr:after, .group:after {
+.row:after {
   content: "";
   display: block;
   height: 0;
@@ -9,7 +9,7 @@
   visibility: hidden; }
 
 .row {
-  margin: 0 -12px 1.5em -12px; }
+  margin: 0 -12px 20px -12px; }
   .row.row-padded {
     margin-left: 0;
     margin-right: 0; }
@@ -94,8 +94,6 @@
 /* Set span offsets */
 .offset-1 {
   margin-left: 8.33333%; }
-  .offset-1:after, .offset-1 .button-row {
-    margin-left: 8.33333%; }
 
 /* Set span widths */
 .span-2 {
@@ -106,8 +104,6 @@
 /* Set span offsets */
 .offset-2 {
   margin-left: 16.66667%; }
-  .offset-2:after, .offset-2 .button-row {
-    margin-left: 16.66667%; }
 
 /* Set span widths */
 .span-3 {
@@ -118,8 +114,6 @@
 /* Set span offsets */
 .offset-3 {
   margin-left: 25%; }
-  .offset-3:after, .offset-3 .button-row {
-    margin-left: 25%; }
 
 /* Set span widths */
 .span-4 {
@@ -130,8 +124,6 @@
 /* Set span offsets */
 .offset-4 {
   margin-left: 33.33333%; }
-  .offset-4:after, .offset-4 .button-row {
-    margin-left: 33.33333%; }
 
 /* Set span widths */
 .span-5 {
@@ -142,8 +134,6 @@
 /* Set span offsets */
 .offset-5 {
   margin-left: 41.66667%; }
-  .offset-5:after, .offset-5 .button-row {
-    margin-left: 41.66667%; }
 
 /* Set span widths */
 .span-6 {
@@ -154,8 +144,6 @@
 /* Set span offsets */
 .offset-6 {
   margin-left: 50%; }
-  .offset-6:after, .offset-6 .button-row {
-    margin-left: 50%; }
 
 /* Set span widths */
 .span-7 {
@@ -166,8 +154,6 @@
 /* Set span offsets */
 .offset-7 {
   margin-left: 58.33333%; }
-  .offset-7:after, .offset-7 .button-row {
-    margin-left: 58.33333%; }
 
 /* Set span widths */
 .span-8 {
@@ -178,8 +164,6 @@
 /* Set span offsets */
 .offset-8 {
   margin-left: 66.66667%; }
-  .offset-8:after, .offset-8 .button-row {
-    margin-left: 66.66667%; }
 
 /* Set span widths */
 .span-9 {
@@ -190,8 +174,6 @@
 /* Set span offsets */
 .offset-9 {
   margin-left: 75%; }
-  .offset-9:after, .offset-9 .button-row {
-    margin-left: 75%; }
 
 /* Set span widths */
 .span-10 {
@@ -202,8 +184,6 @@
 /* Set span offsets */
 .offset-10 {
   margin-left: 83.33333%; }
-  .offset-10:after, .offset-10 .button-row {
-    margin-left: 83.33333%; }
 
 /* Set span widths */
 .span-11 {
@@ -214,8 +194,6 @@
 /* Set span offsets */
 .offset-11 {
   margin-left: 91.66667%; }
-  .offset-11:after, .offset-11 .button-row {
-    margin-left: 91.66667%; }
 
 /* Set span widths */
 .span-12 {
@@ -226,8 +204,6 @@
 /* Set span offsets */
 .offset-12 {
   margin-left: 100%; }
-  .offset-12:after, .offset-12 .button-row {
-    margin-left: 100%; }
 
 .span-half {
   width: 50%; }

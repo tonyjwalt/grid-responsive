@@ -1,0 +1,42 @@
+.grid-ex-cont {
+  padding: 10px 0;
+  position: relative;
+  color: #333;
+  margin-bottom: 20px; }
+  .grid-ex-cont .row > .col {
+    position: relative;
+    text-indent: 10px;
+    line-height: 20px; }
+    .grid-ex-cont .row > .col:after {
+      background-color: #ccc;
+      border: 1px solid #666;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 12px;
+      right: 12px;
+      bottom: 0;
+      z-index: -1;
+      width: auto; }
+  .grid-ex-cont .row-template {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0; }
+    .grid-ex-cont .row-template .col {
+      height: 100%;
+      position: relative;
+      float: left;
+      padding: 0;
+      margin: 0; }
+      .grid-ex-cont .row-template .col:after {
+        border: none;
+        background-color: #eee;
+        visibility: inherit;
+        height: auto;
+        width: auto; }
+    .grid-ex-cont .row-template .span-1 {
+      width: 8.33333%; }

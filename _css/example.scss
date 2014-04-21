@@ -1,0 +1,53 @@
+@import '_global-grid';
+
+.grid-ex-cont {
+  padding: 10px 0;
+  position: relative;
+  color:#333;
+  margin-bottom: 20px;
+
+  .row > .col {
+    position: relative;
+    text-indent: 10px;
+    line-height: 20px;
+    &:after {
+      background-color: #ccc;
+      border: 1px solid #666;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: $gutters;
+      right: $gutters;
+      bottom: 0;
+      z-index: -1;
+      width: auto;
+    }
+  }
+
+  .row-template {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:0;
+    padding:0;
+    .col {
+      height: 100%;
+      position: relative;
+      float: left;
+      padding:0;
+      margin:0;
+      &:after {
+        border:none;
+        background-color: #eee;
+        visibility: inherit;
+        height: auto;
+        width: auto;
+      }
+    }
+    .span-1 {
+      width: (100%/$col-num);
+    }
+  }
+}
