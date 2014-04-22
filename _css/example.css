@@ -4,7 +4,6 @@
   color: #333;
   margin-bottom: 10px; }
   .grid-ex-cont .row > .col {
-    position: relative;
     text-indent: 10px;
     line-height: 20px; }
     .grid-ex-cont .row > .col:before, .grid-ex-cont .row > .col:after {
