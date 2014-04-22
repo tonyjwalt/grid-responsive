@@ -4,6 +4,7 @@
 // ===================================
 .row {
 	margin: 0 (0-$gutters) 20px (0-$gutters);
+	overflow: hidden;
 	@include clearfix();
 	&.row-padded {
 		margin-left: 0;

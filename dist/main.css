@@ -1,5 +1,6 @@
 .row {
   margin: 0 -12px 20px -12px;
+  overflow: hidden;
   *zoom: 1;
   /* Set span widths */
   /* Set span offsets */

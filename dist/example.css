@@ -2,7 +2,8 @@
   padding: 10px 0;
   position: relative;
   color: #333;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  overflow: hidden; }
   .grid-ex-cont .row > .col {
     text-indent: 10px;
     line-height: 20px; }
