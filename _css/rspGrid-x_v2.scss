@@ -1,0 +1,211 @@
+@import '_global-grid';
+// ===================================
+// Styles
+// ===================================
+.container {
+	margin: 0 auto;
+}
+
+.row:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.row {
+	margin: 0 (0-$gutters) 20px (0-$gutters);
+	&.row-padded {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	&.last {
+		margin-bottom: 0;
+	}
+	&.row-zero-margin {
+		margin-bottom:0;
+	}
+	&.row-spacer {
+		padding-top:60px;
+		display:block;
+	}
+	&.row-flat-bottom {
+		margin-bottom:0;
+		.col {margin-bottom: 0; padding-bottom: 0;}
+	}
+	&.row-flat {
+		margin-top:0;
+		margin-bottom: 0;
+		.col {
+			margin-top: 0;
+			padding-top: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+	&.row-flat-top {
+		margin-top:0;
+		.col {margin-top: 0; padding-top: 0;}
+	}
+}
+
+.col {
+	/* will cause padding to cut into box model */
+	@include boxSize();
+	padding: $gutters;
+	display: block;
+	float: left;
+	width: 100%;
+	&.col-flatRight {
+		padding-right: 0;
+	}
+	&.col-flatLeft {
+		padding-left:0;
+	}
+}
+
+.row-equal {
+	position: relative;
+	&.has-btn-row-lg .col {
+		margin-bottom: 60px;
+	}
+	&.has-btn-row-md .col {
+		margin-bottom: 40px;
+	}
+	&.has-btn-row-sm .col {
+		margin-bottom: 20px;
+	}
+	.button-row {
+		@include boxSize();
+		position: absolute;
+		bottom: $gutters;
+		margin-left:-$gutters;
+		padding-right: $gutters;
+	}
+
+	.col-bg {
+		position: absolute;
+		top:0;
+		bottom:0;
+		margin-left:-$gutters;
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			top:0;
+			bottom:0;
+			left: $gutters;
+			right: $gutters;
+			background: #ccc;
+			z-index:-1;
+		}
+	}
+}
+
+
+@for $i from 1 through $col-num {
+	$tmp: (100%/$col-num)*$i;
+	/* Set span widths */
+	.span-#{$i} {
+		width: $tmp;
+		&:after, .col-bg, .button-row { width: $tmp;}
+	}
+	/* Set span offsets */
+	.offset-#{$i} {
+		margin-left: $tmp;
+		// &:after, .button-row { margin-left: $tmp;}
+	}
+}
+.span-half {
+	width: 50%;
+	&:after, .col-bg, .button-row { width: 50%}
+}
+.offset-half {
+	margin-left: 50%;
+	&:after, .col-bg, .button-row { margin-left: 50%}
+}
+.span-third {
+	width: 33.33%;
+	&:after, .col-bg, .button-row { width: 33.33%}
+}
+.offset-third {
+	margin-left: 33.33%;
+	&:after, .col-bg, .button-row { margin-left: 33.33%}
+}
+.span-fourth {
+	width: 25%;
+	&:after, .col-bg, .button-row { width: 25%}
+}
+.offset-fourth {
+	margin-left: 25%;
+	&:after, .col-bg, .button-row { margin-left: 25%}
+}
+
+
+@media ( max-width : $mobile ) {
+	.row { margin-bottom: 0; }
+	.col {
+		float:none;
+		width: 100%;
+		margin-bottom: 0;
+		padding: 0 $gutters;
+	}
+	.col.last {
+		padding-bottom: $gutters;
+		margin-bottom: 1.5em;
+	}
+	.row {
+		.col-bg {
+			display: none;
+		}
+		&.row-equal .button-row {
+			position: static;
+		}
+		&.row-equal{
+			&.has-btn-row-lg .col,
+			&.has-btn-row-md .col,
+			&.has-btn-row-sm .col {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	.split-cont {
+		position: relative;
+		@include clearfix();
+	}
+	.split-2 .col {
+		float: left;
+		width: 50%;
+	}
+	.split-3 .col {
+		float: left;
+		width: 33.33%;
+	}
+	.split-4 .col {
+		float: left;
+		width: 25%;
+	}
+	.split-5 .col {
+		float: left;
+		width: 20%;
+	}
+	.split-6 .col {
+		float: left;
+		width: 16.66%;
+	}
+}
+@media ( max-width : $phone ) {
+	.row .col {
+		float:none;
+		width: 100%;
+	}
+	.row .col-bg {
+		display: none;
+	}
+	.row.row-equal {
+		.button-row {
+			position: static;
+		}
+	}
+}
