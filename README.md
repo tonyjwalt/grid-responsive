@@ -10,7 +10,8 @@ A basic fluid responsive grid written in SCSS with support for column and gutter
   + *main.scss* - manifest scss file that pulls in all needed css files
 + *dist* - folder containing compiled grid css file
 
-## Create a Build
+## Create a Build (using Terminal on a MAC)
++ Ensure you have Sass by opening terminal and typing: *sass -v*
 + Terminal into base folder *grid-responsive*
 + Run: *sass --watch _css:dist*
 
