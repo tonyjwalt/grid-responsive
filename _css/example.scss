@@ -10,8 +10,9 @@
   .row > .col {
     text-indent: 10px;
     line-height: 20px;
+    // To add color shading
     &:before, &:after {
-      background-color: rgba(209, 232, 56, .4);;
+      background-color: rgba(209, 232, 56, .4);
       content: " ";
       position: absolute;
       top: 0;
@@ -29,7 +30,7 @@
       bottom: $gutters;
     }
   }
-
+  // To add grey background reference lines
   .row-template {
     position: absolute;
     top:-10px;
